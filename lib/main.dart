@@ -1,73 +1,105 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
-/*
+
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        body: SafeArea(
-            child: Column(
-              //verticalDirection: VerticalDirection.up,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //crossAxisAlignment: CrossAxisAlignment.end,
-              children: <Widget>[
-                Container(
-                height: 100.0,
-                width: 100.0,
-                //margin: EdgeInsets.all(20.0),
-                //margin: EdgeInsets.symmetric(vertical: 50.0,horizontal: 10.0),
-                //margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const CircleAvatar(
+              radius: 100.0,
+              backgroundImage: AssetImage('images/NilkanthVarni.png'),
+            ),
+            const Center(
+              child: Text('Nilkanth Varni',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 40.0,
                 color: Colors.white,
-                child: Text('Container 1'),
-              ),
-                Container(
-                  height: 100.0,
-                  width: double.infinity,
-                  //margin: EdgeInsets.all(20.0),
-                  //margin: EdgeInsets.symmetric(vertical: 50.0,horizontal: 10.0),
-                  //margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
-                  color: Colors.blue,
-                  child: Text('Container 2'),
-                ),
-                Container(
-                  height: 100.0,
-                  width: 100.0,
-                  //margin: EdgeInsets.all(20.0),
-                  //margin: EdgeInsets.symmetric(vertical: 50.0,horizontal: 10.0),
-                  //margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
-                  color: Colors.red,
-                  child: Text('Container 1'),
-                )
-              ],
-            )),
-      ),
-    );
-  }
-}
-*/
-class MyApp extends StatelessWidget {
-
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.teal,
-        body: SafeArea(
-          child: Column(
-            children: <Widget>[
-              CircleAvatar(
-                radius: 50.0,
-                //backgroundImage: Image.asset(),
+                fontFamily: 'Pacifico',
               )
-            ],
-          ),
+              ),
+            ),
+            Center(
+              child: Text('PARA BRAHMAN',
+              style: TextStyle(
+                fontSize: 25.0,
+                fontFamily: 'Source Sans Pro',
+                color: Colors.teal.shade100,
+                letterSpacing: 2.5,
+                fontWeight: FontWeight.bold
+
+              ),),
+            ),
+            SizedBox(
+              height: 20.0,
+              width: 300.0,
+              child: Divider(
+                color: Colors.teal.shade50,
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10.0),
+              color: Colors.white,
+              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 25.0),
+              child: Row(
+                children: [
+                  const Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  const SizedBox(
+                    width: 10.0,
+                  ),
+                  Text('+369 36093609',
+                   style: TextStyle(
+                     fontFamily: 'Source Sans Pro',
+                     fontSize: 20.0,
+                     color: Colors.teal.shade900
+                   ),)
+                ],
+
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10.0),
+              margin: const EdgeInsets.symmetric(vertical: 10.0 , horizontal: 25.5),
+              color: Colors.white,
+              child: Row(
+                children: [
+                  const Icon(
+                    Icons.mail,
+                    color: Colors.teal,
+                  ),
+                  const SizedBox(
+                    width: 10.0,
+                  ),
+                  Text('Gunatit3609@gmail.com',
+                  style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
+                    color: Colors.teal.shade900
+
+                  ),)
+                ],
+              ),
+            )
+          ],
         ),
+
+      ),
       ),
     );
   }
